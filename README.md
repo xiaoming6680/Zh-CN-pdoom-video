@@ -5,6 +5,15 @@
 
 ![中文版全部图版一览](docs/images/overview.jpg)
 
+## 原作者
+
+这个中文版是在别人的作品上做的汉化，视频和歌曲都不是我原创的：
+
+- **视频原作者：Giacomo Magnanini**。概念、创意方案、渲染引擎和每一个场景都出自原项目，代码以 [MIT 许可证](LICENSE) 开源（Copyright (c) 2026 Giacomo Magnanini）。原版 4K 视频：[YouTube](https://www.youtube.com/watch?v=5EoO5413dBY)。
+- **歌曲《I'm Upping My P(doom)》**：歌词由 [osmarks](https://docs.osmarks.net/hypha/p%28doom%29_song_objectively_correct_interpretation) 创作，开头主歌和副歌出自 [MusicPerson](https://www.udio.com/creators/MusicPerson)，另有 EleutherAI Discord 网友贡献的句子。原版用 Udio 生成（[YouTube](https://www.youtube.com/watch?v=uEB5E67vcPA)）；本视频用的是 [deckard (@slimer48484)](https://x.com/slimer48484/status/2097752569212756134) 用 Suno 制作的“Claude-Pop”版本。歌曲和歌词归各自作者所有，不在 MIT 许可证范围内。
+
+我只负责中文汉化部分（见下一节）。感谢原作者们的开源和创作。
+
 ## 我做的中文汉化
 
 中文歌词不是贴在画面底部的一条固定字幕，而是逐幅图版重新排进每个画面自己的构图里，和英文原句一起组成双语版式：
