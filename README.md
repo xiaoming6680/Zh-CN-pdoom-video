@@ -1,8 +1,35 @@
 # I'm Upping My P(doom) —— 音乐视频（中文本地化版）
 
-> **项目简介：** 这是用代码生成的音乐视频 *I'm Upping My P(doom)* 的中文本地化版本。在原项目基础上加入了中文歌词字幕（`data/lyrics.zh.json`）、中文字体和双语排版，可以在浏览器里实时预览，也可以离线渲染成 1080p60 / 4K60 视频。
->
-> 本仓库基于原作者的开源项目，按原项目的 [LICENSE](LICENSE) 发布。英文原版说明见 [README.en.md](README.en.md)。命令、代码、文件路径和歌词保留原文。
+> 用代码生成的 AI 主题音乐视频 *I'm Upping My P(doom)* 的**中文深度汉化版**。中文汉化：**XIAOMING6680**。
+> 原项目作者 Giacomo Magnanini，按 MIT 协议开源（见 [LICENSE](LICENSE)）；英文原版说明见 [README.en.md](README.en.md)。
+
+![中文版全部图版一览](docs/images/overview.jpg)
+
+## 我做的中文汉化
+
+中文歌词不是贴在画面底部的一条固定字幕，而是逐幅图版重新排进每个画面自己的构图里，和英文原句一起组成双语版式：
+
+| | |
+|:-:|:-:|
+| ![修格斯的谎言](docs/images/shoggoth.jpg) | ![被困在中文屋](docs/images/chinese.jpg) |
+| **修格斯**：中文歌词跟着英文大字一起排版 | **中文屋**：中文标题嵌进三维场景 |
+| ![英伟达直冲月球](docs/images/nvda.jpg) | ![够安全了](docs/images/safe.jpg) |
+| **月球储备券**：钞票上的文字全部改成中文 | **安全评测表**：表格、印章、批注都是中文 |
+| ![冲破每一道安全围栏](docs/images/breaking.jpg) | ![我们点燃了导火索](docs/images/fuse.jpg) |
+| **冲破围栏**：中文副标题配合动态大字 | **导火索**：中文歌词沿着引线弯曲排版 |
+
+具体做了这些：
+
+- **中文歌词翻译与逐词同步**：[`data/lyrics.zh.json`](data/lyrics.zh.json) 收录全曲中文歌词，时间和英文歌词逐行对齐，跟着演唱逐字点亮。
+- **逐幅图版的双语排版**：每个场景都给中文单独设计了位置、字号和动画，中英文一起构图，而不是统一压一条底部字幕。
+- **界面文字全部中文化**：HUD、表格、标签、钞票、终端界面等所有非歌词文字都换成了中文（各场景里用 [`app/src/engine/lang.ts`](app/src/engine/lang.ts) 提供的 `tr(英文, 中文)` 切换）。梗名词用中文圈的常见叫法，比如 NVDA 写作「英伟达」、Shoggoth 写作「修格斯」。
+- **中文字体**：用 [`analysis/make_fonts_zh.py`](analysis/make_fonts_zh.py) 从思源 / Noto 字体（OFL 协议）里抽出用到的汉字生成子集，排版逻辑在 [`app/src/engine/zh.ts`](app/src/engine/zh.ts)。
+- **文档翻译**：[`docs/TREATMENT.zh-CN.md`](docs/TREATMENT.zh-CN.md)（创意方案）和 [`docs/ENGINE.zh-CN.md`](docs/ENGINE.zh-CN.md)（引擎文档）。
+- **署名水印**：画面右上角显示「中文字幕 XIAOMING6680」，只署名字幕汉化，视频本身仍归原作者。
+
+## 原项目说明（中文译本）
+
+下文是原 README 的中文译本，命令、代码、文件路径和歌词保留原文。
 
 这是一支用代码生成、渲染的音乐视频，配有逐词同步的卡拉 OK 式排版。每一帧都是歌曲时间的确定性函数，所以浏览器里的实时预览和离线导出的 1080p60（或 4K60）视频完全一致。
 
