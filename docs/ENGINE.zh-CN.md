@@ -8,7 +8,7 @@
 
 ## 怎么跑起来
 
-- 开发服务器（可能已经在跑了）：`cd app && bunx vite --port 5173`。预览：http://localhost:5173/?t=23.0（空格 = 播放/暂停，←/→ = ±1 秒，shift = ±5 秒，`,`/`.` = ±1 帧，`[`/`]` = 上一个/下一个时间线条目，`l` = 循环当前条目，`h` = 隐藏界面）。
+- 开发服务器（可能已经在跑了）：`cd app && bunx vite --port 5173`。预览：<http://localhost:5173/?t=23.0>（空格 = 播放/暂停，←/→ = ±1 秒，shift = ±5 秒，`,`/`.` = ±1 帧，`[`/`]` = 上一个/下一个时间线条目，`l` = 循环当前条目，`h` = 隐藏界面）。
 - 静帧（检查成果的主要方式——渲染完一定要用 Read 工具**亲眼看**这些 PNG）：`cd app && bun scripts/render.ts stills --t 12.5,13.0,14.2 --only open --out ../out/wip/open`
 - 某段时间范围的缩略图拼版：`bun scripts/render.ts sheet --from 1.5 --to 9 --n 16 --cols 4 --only open --out ../out/wip/open/sheet.png`
 - 短视频片段（用来判断运动效果：用 ffmpeg 抽帧来看，或者干脆相信数学）：`bun scripts/render.ts video --from 20 --to 25 --only hook --out ../out/wip/hook.mp4 --preset veryfast`
